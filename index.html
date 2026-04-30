@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>ADLIN HOTEL</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <header>
+<h1>ADLIN Hotel</h1>
+<link rel="stylesheet" href="style.css">
+  
+<nav>
+<button onclick="abrirAba('home')">Home</button>
+<button onclick="abrirAba('quartos')">Quartos</button>
+<button onclick="abrirAba('restaurante')">Restaurante</button>
+<button onclick="abrirAba('reservas')">Reservas</button>
+<button onclick="abrirAba('login')">Login</button>
+<button onclick="abrirAba('fatura')">Fatura</button>
+</nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="aba ativa">
+<h2>Bem-vindo ao ADLIN Hotel</h2>
+
+<p><strong>História:</strong> O ADLIN Hotel foi criado para trazer luxo moderno a Angola que foi implementado no mercado por investidores locais que são os engenheiros informáticos Stelvio Miconde(CEO),Viedson Viegas(embaixador) .</p>
+<p><strong>Biografia:</strong> Localizado em Luanda, oferece experiência premium inspirada em hotéis internacionais.</p>
+</section>
+<section id="home" class="aba ativa">
+
+<div class="hero">
+<h2>ADLIN Hotel</h2>
+<p>Luxo, conforto e elegância em Angola</p>
+</div>
+
+<h3>Sobre o Hotel</h3>
+<p><strong>História:</strong> O ADLIN Hotel nasceu com a visão de oferecer uma experiência de luxo comparável aos melhores hotéis internacionais.</p>
+
+<p><strong>Biografia:</strong> Localizado em Luanda, combina arquitetura moderna, conforto premium e hospitalidade angolana.</p>
+
+<h3>Galeria</h3>
+
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+</div>
+
+</section>
+<!-- QUARTOS -->
+<section id="quartos" class="aba">
+
+<h2>Escolha o seu Quarto</h2>
+
+<div class="quartos-grid">
+
+<!-- SUITE PRESIDENCIAL -->
+<div class="quarto-card" onclick="selecionarQuarto('Suite Presidencial', 350000)">
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461">
+<h3>Suite Presidencial</h3>
+<p>Luxo máximo com vista panorâmica</p>
+<span>350.000 Kz / noite</span>
+<button>Selecionar</button>
+</div>
+
+<!-- MASTER DELUXE -->
+<div class="quarto-card" onclick="selecionarQuarto('Master Deluxe', 200000)">
+<img src="https://images.unsplash.com/photo-1560184897-502a475f7a0d">
+<h3>Master Deluxe</h3>
+<p>Conforto premium com design moderno</p>
+<span>200.000 Kz / noite</span>
+<button>Selecionar</button>
+</div>
+
+<!-- MASTER EXECUTIVO -->
+<div class="quarto-card" onclick="selecionarQuarto('Master Executivo', 180000)">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+<h3>Master Executivo</h3>
+<p>Ideal para negócios e estadias longas</p>
+<span>180.000 Kz / noite</span>
+<button>Selecionar</button>
+</div>
+
+<!-- FAMILIAR -->
+<div class="quarto-card" onclick="selecionarQuarto('Suite Familiar', 120000)">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+<h3>Suite Familiar</h3>
+<p>Espaço perfeito para famílias</p>
+<span>120.000 Kz / noite</span>
+<button>Selecionar</button>
+</div>
+
+<!-- STANDARD -->
+<div class="quarto-card" onclick="selecionarQuarto('Quarto Standard', 80000)">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+<h3>Quarto Standard</h3>
+<p>Conforto acessível e moderno</p>
+<span>80.000 Kz / noite</span>
+<button>Selecionar</button>
+</div>
+
+<!-- ECONOMICO -->
+<div class="quarto-card" onclick="selecionarQuarto('Quarto Económico', 50000)">
+<img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4">
+<h3>Quarto Económico</h3>
+<p>Simples, confortável e acessível</p>
+<span>50.000 Kz / noite</span>
+<button>Selecionar</button>
+</div>
+
+</div>
+
+<p id="quartoSelecionado"></p>
+
+</section>
+<!-- RESTAURANTE -->
+<section id="restaurante" class="aba">
+<h2>Restaurante</h2>
+
+<h3>🍽️ Prato do Dia</h3>
+<p id="pratoDia"></p>
+
+<h3>Menu Completo</h3>
+<ul id="menu"></ul>
+</section>
+
+<!-- RESERVAS -->
+<section id="reservas" class="aba">
+<h2>Reservas</h2>
+
+<form id="formReserva">
+<input type="date" id="checkin">
+<input type="date" id="checkout">
+
+<select id="quartoSelect">
+<option>Suite Presidencial</option>
+<option>Master Deluxe</option>
+<option>Quarto Standard</option>
+</select>
+
+<button>Reservar</button>
+</form>
+
+<p id="resposta"></p>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="aba">
+<h2>Login</h2>
+<input id="user" placeholder="Usuário">
+<input id="pass" type="password" placeholder="Senha">
+<button onclick="login()">Entrar</button>
+<p id="loginStatus"></p>
+</section>
+
+<!-- FATURA -->
+<section id="fatura" class="aba">
+<h2>Fatura</h2>
+<button onclick="gerarFatura()">Gerar Fatura</button>
+<pre id="faturaTexto"></pre>
+  <script src="script.js"></script>
+</section>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

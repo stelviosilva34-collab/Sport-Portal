@@ -1,0 +1,73 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+  margin: 0;
+}
+
+header {
+  background: black;
+  padding: 15px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+}
+
+.aba {
+  display: none;
+  padding: 40px;
+}
+
+.ativa {
+  display: block;
+}
+
+input, select {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+}
+
+.hero {
+  height: 400px;
+  background: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.galeria img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+.quarto-card img {
+  width: 100%;
+  height: 120px;       /* reduz tamanho */
+  object-fit: cover;
+  display: block;
+}
